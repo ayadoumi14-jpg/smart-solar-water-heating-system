@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B1C2C"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SMART CONTROL PANEL"
+        android:textColor="#00E5FF"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <ToggleButton
+        android:id="@+id/conn"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/wifioff"
+        android:textOn=""
+        android:textOff=""
+        android:onClick="onToggleClicked_1"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="#142B3D"
+        app:layout_constraintTop_toBottomOf="@id/conn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TEMP SET"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/EditTextttt"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:background="#1E3A52"
+                android:gravity="center"
+                android:text="00"
+                android:textColor="#00E5FF"
+                android:textSize="22sp"
+                android:inputType="number"
+                android:maxLength="3"
+                android:cursorVisible="true" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="#142B3D"
+        app:layout_constraintTop_toBottomOf="@id/card1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CURRENT TEMP"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/noww"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:background="#1E3A52"
+                android:gravity="center"
+                android:text="30"
+                android:textColor="#00E5FF"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card3"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="#142B3D"
+        app:layout_constraintTop_toBottomOf="@id/card2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="VOLTAGE"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/voltt"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:background="#1E3A52"
+                android:gravity="center"
+                android:text="12"
+                android:textColor="#00E5FF"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/sendd"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:text="SEND DATA"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#00E5FF"
+        app:layout_constraintTop_toBottomOf="@id/card3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"/>
+
+    <TextView
+        android:id="@+id/showww"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="SYSTEM READY"
+        android:gravity="center"
+        android:textColor="#00E5FF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/sendd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="12dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
